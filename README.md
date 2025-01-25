@@ -148,11 +148,8 @@ theharvester -d targetcompany.com -b shodan
 - Retrieves network information from Shodan.
 
 ---
-Here are additional **examples of using different options** in TheHarvester to customize scans for various use cases:
 
----
-
-Here are some **different examples** of using additional options (flags) in **TheHarvester** to customize your scans:
+### ** Here are additional **examples of using different options** in TheHarvester to customize scans for various use cases:
 
 ---
 
@@ -248,20 +245,7 @@ theharvester -d example.com -b google -f /path/to/output/results.txt
 
 ---
 
-### Example Combining Multiple Flags:
-```bash
-theharvester -d example.com -b google,bing,crtsh -l 50 -f output.json --proxy http://127.0.0.1:8080 -v
-```
-- Performs a comprehensive scan:
-  - Uses multiple sources.
-  - Limits results to 50 per source.
-  - Saves the output in JSON format.
-  - Routes traffic through a proxy.
-  - Includes virtual host information.
-
----
-
-These examples should help you customize **TheHarvester** to suit your specific OSINT needs! Let me know if you need more examples or clarifications!
+### **These examples should help you customize **TheHarvester** to suit your specific OSINT needs! Let me know if you need more examples or clarifications!
 
 
 
