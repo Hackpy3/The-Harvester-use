@@ -152,6 +152,119 @@ Here are additional **examples of using different options** in TheHarvester to c
 
 ---
 
+Here are some **different examples** of using additional options (flags) in **TheHarvester** to customize your scans:
+
+---
+
+## **1. Limit Results**
+```bash
+theharvester -d example.com -b google -l 20
+```
+- Limits the number of results to 20 per search engine.
+
+---
+
+## **2. Save Output to a File**
+```bash
+theharvester -d example.com -b google -f results.txt
+```
+- Saves the scan results to `results.txt`.
+
+```bash
+theharvester -d example.com -b google -f output.json
+```
+- Saves the scan results in JSON format.
+
+---
+
+## **3. Search Virtual Hosts**
+```bash
+theharvester -d example.com -b google -v
+```
+- Searches for virtual hosts associated with the domain.
+
+---
+
+## **4. Use a Proxy**
+```bash
+theharvester -d example.com -b google --proxy http://127.0.0.1:8080
+```
+- Routes the search through a proxy server at `127.0.0.1:8080`.
+
+---
+
+## **5. Disable DNS Resolution**
+```bash
+theharvester -d example.com -b google --dns-resolve False
+```
+- Disables DNS resolution for collected subdomains.
+
+---
+
+## **6. Run Passive DNS Query**
+```bash
+theharvester -d example.com -b crtsh --dns-server 8.8.8.8
+```
+- Performs a DNS query using Google's public DNS server (`8.8.8.8`).
+
+---
+
+## **7. Use APIs**
+### Example: Shodan (Requires API Key)
+```bash
+theharvester -d example.com -b shodan
+```
+- Uses the Shodan API to collect network-related data.
+
+### Example: Hunter.io
+```bash
+theharvester -d example.com -b hunter
+```
+- Uses Hunter.io for email collection.
+
+---
+
+## **8. Combine Multiple Sources**
+```bash
+theharvester -d example.com -b google,bing,crtsh
+```
+- Searches multiple sources for comprehensive results.
+
+---
+
+## **9. Debugging/Verbose Output**
+```bash
+theharvester -d example.com -b google --debug
+```
+- Displays detailed debugging information during the scan.
+
+---
+
+## **10. Specify Output Location**
+```bash
+theharvester -d example.com -b google -f /path/to/output/results.txt
+```
+- Saves the results to a custom file path.
+
+---
+
+### Example Combining Multiple Flags:
+```bash
+theharvester -d example.com -b google,bing,crtsh -l 50 -f output.json --proxy http://127.0.0.1:8080 -v
+```
+- Performs a comprehensive scan:
+  - Uses multiple sources.
+  - Limits results to 50 per source.
+  - Saves the output in JSON format.
+  - Routes traffic through a proxy.
+  - Includes virtual host information.
+
+---
+
+These examples should help you customize **TheHarvester** to suit your specific OSINT needs! Let me know if you need more examples or clarifications!
+
+
+
 ### **1. Collect Emails, Subdomains, and IPs**
 ```bash
 theharvester -d example.com -b google -f collected_data.txt
